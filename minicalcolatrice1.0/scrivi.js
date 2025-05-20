@@ -1,14 +1,31 @@
-const addendo1 = document.querySelector("#addendo1");
-const addendo2 = document.querySelector("#addendo2");
+const display = document.querySelector("#display");
+const numeri = document.querySelectorAll(".numero");
+const operazioni = document.querySelectorAll(".operazione");
 const uguale = document.querySelector("#uguale");
-const risultato = document.querySelector("#risultato");
+const clear = document.querySelector("#clear");
 
-uguale.addEventListener("click", function() {
-    let valore1 = parseFloat(addendo1.value);
-    let valore2 = parseFloat(addendo2.value);
-    if (!isNaN(valore1) && !isNaN(valore2)) {
-        risultato.value = valore1 + valore2;
-    } else {
-        risultato.value = "Errore: inserisci numeri validi!";
+let operazioneCorrente = "";
+
+numeri.forEach(pulsante => {
+    pulsante.addEventListener("click", () => {
+        display.value += pulsante.textContent;
+    });
+});
+
+operazioni.forEach(pulsante => {
+    pulsante.addEventListener("click", () => {
+        display.value += " " + pulsante.textContent + " ";
+    });
+});
+
+uguale.addEventListener("click", () => {
+    try {
+        display.value = eval(display.value);
+    } catch {
+        display.value = "Errore!";
     }
+});
+
+clear.addEventListener("click", () => {
+    display.value = "";
 });

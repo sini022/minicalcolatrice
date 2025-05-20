@@ -1,0 +1,46 @@
+body{
+    background-color: rgba(186, 135, 244, 0.591);
+}   
+.calcolatrice {
+    border: 2px solid black;
+    padding: 5px;
+    height: 370px;
+    width: 300px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 0 10px black;
+    background-color: rgba(106, 241, 241, 0.369);
+}
+
+#display {
+    width: 100%;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    text-align: right;
+}
+
+.pulsanti {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+}
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+    height: auto;
+}
+
